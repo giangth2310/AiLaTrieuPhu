@@ -1,9 +1,10 @@
+package model;
 
 public class User {
 
     private String userName;
     private String password;
-    private Role role = Role.guest;
+    private Role role;
 
     public User() {}
 
@@ -20,7 +21,7 @@ public class User {
         this.role = role;
     }
 
-    void play() {
+    public void play() {
         System.out.println(userName + " " + password);
     }
 }

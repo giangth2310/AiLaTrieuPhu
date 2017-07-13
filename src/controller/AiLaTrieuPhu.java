@@ -1,3 +1,7 @@
+package controller;
+
+import model.*;
+import view.*;
 
 public class AiLaTrieuPhu {
 
@@ -7,11 +11,11 @@ public class AiLaTrieuPhu {
         Database database = new Database();
 
         User user = gameIO.logIn();
-        database.checkUser(user);
+        user = database.checkUser(user);
         System.out.println(user.getRole());
 
-        if (user.getRole() == Role.admin) {
-            //xu ly voi admin
+        if (user.getRole() == Role.ADMIN) {
+            //xu ly voi ADMIN
         } else {
             user.play();
         }

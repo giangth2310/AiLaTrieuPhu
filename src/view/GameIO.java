@@ -1,8 +1,12 @@
-import java.util.Scanner;
+package view;
+
+import model.User;
+
+import java.util.*;
 
 public class GameIO {
 
-    User logIn() {
+    public User logIn() {
         User user = new User();
 
         String userName, password;
