@@ -34,4 +34,6 @@ public class Question {
     public byte getRightAnswer() {
         return rightAnswer;
     }
+
+
 }
