@@ -5,19 +5,59 @@ import view.*;
 
 public class AiLaTrieuPhu {
 
+    private static GameIO gameIO = new GameIO();
+    private static Database database = new Database();
+
     public static void main(String[] args) {
         AiLaTrieuPhu game = new AiLaTrieuPhu();
-        GameIO gameIO = new GameIO();
-        Database database = new Database();
 
-        User user = gameIO.logIn();
-        user = database.checkUser(user);
-        System.out.println(user.getRole());
+        User user;
+        do {
+            user = gameIO.logIn();
+            user = database.checkUser(user);
+        } while (user.getRole() == null);
 
         if (user.getRole() == Role.ADMIN) {
-            //xu ly voi ADMIN
+            game.adminProcess(user);
         } else {
-            user.play();
+            game.guestProcess(user);
         }
+    }
+
+    private void adminProcess(User user) {
+        Admin admin = new Admin(user);
+
+        admin.showAdminMenu();
+
+        switch (admin.getSelction()) {
+            case 0:
+                play(admin);
+                break;
+            case 1:
+                Question question = admin.takeNewQuestion();
+                database.addQuestion(question);
+                break;
+        }
+    }
+
+    private void guestProcess(User user) {
+        play(user);
+    }
+
+    private void play(User user) {
+        boolean stopPlaying = false;
+
+        while (! stopPlaying) {
+            Question question = database.getNextQuestion();
+            gameIO.loadQuestion(question);
+            int selection = gameIO.getSelection();
+            if (selection == question.getRightAnswer()) {
+                user.scored();
+            } else {
+                stopPlaying = true;
+            }
+        }
+
+        gameIO.showScore(user);
     }
 }

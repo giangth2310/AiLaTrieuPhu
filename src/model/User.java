@@ -1,15 +1,34 @@
 package model;
 
+import view.GameIO;
+
 public class User {
 
     private String userName;
     private String password;
     private Role role;
+    private int score = 0;
 
     public User() {}
 
     public User(String userName, String password) {
         this.userName = userName;
+        this.password = password;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -21,7 +40,11 @@ public class User {
         this.role = role;
     }
 
-    public void play() {
-        System.out.println(userName + " " + password);
+    public int getScore() {
+        return score;
+    }
+
+    public void scored() {
+        score += 1;
     }
 }
