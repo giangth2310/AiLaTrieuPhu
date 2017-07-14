@@ -31,7 +31,7 @@ CREATE TABLE `question` (
   `answer3` text NOT NULL,
   `rightAnswer` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `question` (
 
 LOCK TABLES `question` WRITE;
 /*!40000 ALTER TABLE `question` DISABLE KEYS */;
-INSERT INTO `question` VALUES (1,'mot cong mot bang may?','mot','hai','ba','bon',1),(2,'chu cai dau tien trong bang chu cai la gi?','b','c','a','d',2),(3,'mot con ... xoe ra hai cai canh','vit','cho','meo','lon',0),(5,'con gi sua gau gau?','meo','ga','lon','cho',3);
+INSERT INTO `question` VALUES (1,'mot cong mot bang may?','mot','hai','ba','bon',1),(2,'chu cai dau tien trong bang chu cai la gi?','b','c','a','d',2),(3,'mot con ... xoe ra hai cai canh','vit','cho','meo','lon',0),(5,'con gi sua gau gau?','meo','ga','lon','cho',3),(6,'fish trong tieng anh nghia la gi?','cho','meo','lon','ca',3);
 /*!40000 ALTER TABLE `question` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -78,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-07-14 13:58:01
+-- Dump completed on 2017-07-14 18:45:21

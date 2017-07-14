@@ -27,14 +27,14 @@ public class AiLaTrieuPhu {
     private void adminProcess(User user) {
         Admin admin = new Admin(user);
 
-        admin.showAdminMenu();
+        admin.showMenu();
 
         switch (admin.getSelction()) {
             case 0:
                 play(admin);
                 break;
             case 1:
-                Question question = admin.takeNewQuestion();
+                Question question = gameIO.takeNewQuestion();
                 database.addQuestion(question);
                 break;
         }

@@ -124,7 +124,5 @@ public class Database {
         String[] answer = question.getAnswer();
         Number rightAnswer = question.getRightAnswer();
         String[] value = {answer[0], answer[1], answer[2], answer[3], question.getContent(), rightAnswer.toString()};
-
-        System.out.println(executeUpdate(sdlCommand, index, value));
     }
 }

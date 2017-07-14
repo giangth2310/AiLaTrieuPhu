@@ -42,4 +42,23 @@ public class GameIO {
     public void showScore(User user) {
         System.out.println("So diem ban danh duoc la: " + user.getScore());
     }
+
+    public Question takeNewQuestion() {
+        Scanner scanner = new Scanner(System.in);
+        String content;
+        String[] answer = new String[4];
+        byte rightAnswer;
+
+        System.out.println("Nhap cau hoi: ");
+        content = scanner.nextLine();
+        System.out.println("Nhap 4 cau tra loi: ");
+        answer[0] = scanner.nextLine();
+        answer[1] = scanner.nextLine();
+        answer[2] = scanner.nextLine();
+        answer[3] = scanner.nextLine();
+        System.out.println("Nhap cau tra loi dung (0..3): ");
+        rightAnswer = scanner.nextByte();
+
+        return new Question(content, answer, rightAnswer);
+    }
 }
