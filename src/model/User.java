@@ -1,7 +1,5 @@
 package model;
 
-import view.GameIO;
-
 public class User {
 
     private String userName;

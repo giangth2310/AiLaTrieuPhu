@@ -100,7 +100,11 @@ public class Database {
 
     public Question getNextQuestion() {
         currentQuestion += 1;
-        return questionList.get(currentQuestion);
+        try {
+            return questionList.get(currentQuestion);
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     private int executeUpdate(String sdlCommand, int[] index, String[] value) {
@@ -124,5 +128,7 @@ public class Database {
         String[] answer = question.getAnswer();
         Number rightAnswer = question.getRightAnswer();
         String[] value = {answer[0], answer[1], answer[2], answer[3], question.getContent(), rightAnswer.toString()};
+
+        executeUpdate(sdlCommand, index, value);
     }
 }

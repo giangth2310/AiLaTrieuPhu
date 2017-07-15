@@ -5,7 +5,7 @@ import view.*;
 
 public class AiLaTrieuPhu {
 
-    private static GameIO gameIO = new GameIO();
+    private static GameIO gameIO = new GameIOConsole();
     private static Database database = new Database();
 
     public static void main(String[] args) {
@@ -25,13 +25,11 @@ public class AiLaTrieuPhu {
     }
 
     private void adminProcess(User user) {
-        Admin admin = new Admin(user);
+        gameIO.showAdminMenu();
 
-        admin.showMenu();
-
-        switch (admin.getSelction()) {
+        switch (gameIO.getSelction()) {
             case 0:
-                play(admin);
+                play(user);
                 break;
             case 1:
                 Question question = gameIO.takeNewQuestion();
@@ -49,12 +47,17 @@ public class AiLaTrieuPhu {
 
         while (! stopPlaying) {
             Question question = database.getNextQuestion();
-            gameIO.loadQuestion(question);
-            int selection = gameIO.getSelection();
-            if (selection == question.getRightAnswer()) {
-                user.scored();
+            if (question != null) {
+                gameIO.loadQuestion(question);
+                int selection = gameIO.getSelection();
+                if (selection == question.getRightAnswer()) {
+                    user.scored();
+                } else {
+                    stopPlaying = true;
+                }
             } else {
                 stopPlaying = true;
+                gameIO.winGame();
             }
         }
 
