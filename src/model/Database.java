@@ -82,7 +82,7 @@ public class Database {
     }
 
     private void getAllQuestion() {
-        ResultSet resultSet = getData("select * from question");
+        ResultSet resultSet = getData("select * from questions");
 
         try {
             while (resultSet.next()) {
@@ -123,7 +123,7 @@ public class Database {
     }
 
     public void addQuestion(Question question) {
-        String sdlCommand = "insert into question(answer0,answer1,answer2,answer3,content,rightAnswer) values(?,?,?,?,?,?)";
+        String sdlCommand = "insert into questions(answer0,answer1,answer2,answer3,content,rightAnswer) values(?,?,?,?,?,?)";
         int[] index = {1, 2, 3, 4, 5, 6};
         String[] answer = question.getAnswer();
         Number rightAnswer = question.getRightAnswer();
@@ -131,4 +131,5 @@ public class Database {
 
         executeUpdate(sdlCommand, index, value);
     }
+
 }
