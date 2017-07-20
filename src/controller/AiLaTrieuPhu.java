@@ -27,7 +27,7 @@ public class AiLaTrieuPhu {
     private void adminProcess(User user) {
         gameIO.showAdminMenu();
 
-        switch (gameIO.getSelction()) {
+        switch (gameIO.getAdminSelection()) {
             case 0:
                 play(user);
                 break;

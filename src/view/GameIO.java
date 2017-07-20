@@ -18,5 +18,5 @@ public interface GameIO {
 
     public void showAdminMenu();
 
-    public int getSelction();
+    public int getAdminSelection();
 }

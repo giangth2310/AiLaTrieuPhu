@@ -6,10 +6,7 @@ import java.util.*;
 
 public class Database {
 
-    private ArrayList<Question> questionList = new ArrayList<Question>();
-    private String dbUser;
-    private String dbUrl;
-    private String dbPassword;
+    private ArrayList<Question> questionList = new ArrayList<>();
     private Connection connection;
     private Statement statement;
     private static int currentQuestion = -1;
@@ -24,16 +21,12 @@ public class Database {
         try {
             Properties properties = new Properties();
             properties.load(new FileInputStream("database.properties"));
-            dbUrl = properties.getProperty("url");
-            dbUser = properties.getProperty("user");
-            dbPassword = properties.getProperty("password");
+            String dbUrl = properties.getProperty("url");
+            String dbUser = properties.getProperty("user");
+            String dbPassword = properties.getProperty("password");
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        } catch (IOException | ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
     }

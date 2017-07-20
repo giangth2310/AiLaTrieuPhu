@@ -6,8 +6,6 @@ import java.util.*;
 public class GameIOConsole implements GameIO {
 
     public User logIn() {
-        User user = new User();
-
         String userName, password;
         System.out.print("Ten dang nhap: ");
         Scanner scanner = new Scanner(System.in);
@@ -71,7 +69,7 @@ public class GameIOConsole implements GameIO {
         System.out.println("1. Them cau hoi");
     }
 
-    public int getSelction() {
+    public int getAdminSelection() {
         Scanner scanner = new Scanner(System.in);
         int selection;
 
