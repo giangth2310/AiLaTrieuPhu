@@ -12,10 +12,16 @@ public class AiLaTrieuPhu {
         AiLaTrieuPhu game = new AiLaTrieuPhu();
 
         User user;
+        boolean isValid = false;
         do {
             user = gameIO.logIn();
             user = database.checkUser(user);
-        } while (user.getRole() == null);
+            if (user.getRole() != null) {
+                isValid = true;
+            } else {
+                gameIO.notifyInvalidUser();
+            }
+        } while (! isValid);
 
         if (user.getRole() == Role.ADMIN) {
             game.adminProcess(user);

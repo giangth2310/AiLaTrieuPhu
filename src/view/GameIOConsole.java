@@ -6,14 +6,18 @@ import java.util.*;
 public class GameIOConsole implements GameIO {
 
     public User logIn() {
-        String userName, password;
+        String username, password;
         System.out.print("Ten dang nhap: ");
         Scanner scanner = new Scanner(System.in);
-        userName = scanner.next();
+        username = scanner.next();
         System.out.print("Mat khau: ");
         password = scanner.next();
 
-        return new User(userName, password);
+        return new User(username, password);
+    }
+
+    public void notifyInvalidUser() {
+        System.out.println("Wrong username or password");
     }
 
     public void loadQuestion(Question question) {

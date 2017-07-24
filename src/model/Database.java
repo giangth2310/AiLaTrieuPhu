@@ -53,11 +53,11 @@ public class Database {
 
     public User checkUser(User user) {
 
-        ResultSet resultSet = getData("select * from user where userName = '" + user.getUserName() + "'");
+        ResultSet resultSet = getData("select * from user where userName = '" + user.getUsername() + "'");
 
         try {
             if (resultSet.next()) {
-                if (user.getUserName().equals("admin")) {
+                if (user.getUsername().equals("admin")) {
                     if (resultSet.getString(3).equals(user.getPassword())) {
                         user.setRole(Role.ADMIN);
                     }

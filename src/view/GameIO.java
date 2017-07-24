@@ -4,19 +4,21 @@ import model.Question;
 import model.User;
 
 public interface GameIO {
-    public User logIn();
+    User logIn();
 
-    public void loadQuestion(Question question);
+    void loadQuestion(Question question);
 
-    public int getSelection();
+    int getSelection();
 
-    public void showScore(User user);
+    void showScore(User user);
 
-    public Question takeNewQuestion();
+    Question takeNewQuestion();
 
-    public void winGame();
+    void winGame();
 
-    public void showAdminMenu();
+    void showAdminMenu();
 
-    public int getAdminSelection();
+    int getAdminSelection();
+
+    void notifyInvalidUser();
 }
