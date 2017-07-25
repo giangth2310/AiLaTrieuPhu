@@ -41,7 +41,7 @@ public class Database {
         }
     }
 
-    public ResultSet getData(String sqlCommand) {
+    private ResultSet getData(String sqlCommand) {
         ResultSet resultSet = null;
         try {
             resultSet = statement.executeQuery(sqlCommand);
@@ -100,19 +100,16 @@ public class Database {
         }
     }
 
-    private int executeUpdate(String sdlCommand, int[] index, String[] value) {
-        int rowAffected = 0;
+    private void executeUpdate(String sdlCommand, int[] index, String[] value) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sdlCommand);
             for (int i = 0; i < index.length; i++) {
                 preparedStatement.setString(index[i], value[i]);
             }
-            rowAffected = preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return rowAffected;
     }
 
     public void addQuestion(Question question) {

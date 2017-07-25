@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d006df0a-ebe1-4e0c-97b1-0746acb018c7" name="Default" comment="thay doi cau truc game">
+    <list default="true" id="d006df0a-ebe1-4e0c-97b1-0746acb018c7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AiLaTrieuPhu/controller/AiLaTrieuPhu.class" afterPath="$PROJECT_DIR$/out/production/AiLaTrieuPhu/controller/AiLaTrieuPhu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AiLaTrieuPhu/model/Database.class" afterPath="$PROJECT_DIR$/out/production/AiLaTrieuPhu/model/Database.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AiLaTrieuPhu/model/User.class" afterPath="$PROJECT_DIR$/out/production/AiLaTrieuPhu/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AiLaTrieuPhu/view/GameIO.class" afterPath="$PROJECT_DIR$/out/production/AiLaTrieuPhu/view/GameIO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AiLaTrieuPhu/view/GameIOConsole.class" afterPath="$PROJECT_DIR$/out/production/AiLaTrieuPhu/view/GameIOConsole.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/AiLaTrieuPhu.java" afterPath="$PROJECT_DIR$/src/controller/AiLaTrieuPhu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Database.java" afterPath="$PROJECT_DIR$/src/model/Database.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/User.java" afterPath="$PROJECT_DIR$/src/model/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/GameIO.java" afterPath="$PROJECT_DIR$/src/view/GameIO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/GameIOConsole.java" afterPath="$PROJECT_DIR$/src/view/GameIOConsole.java" />
     </list>
@@ -20,14 +24,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AiLaTrieuPhu.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AiLaTrieuPhu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/AiLaTrieuPhu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-536">
-              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="-228">
+              <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Question.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Question.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,9 +59,19 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="525">
+              <caret line="102" column="79" lean-forward="false" selection-start-line="102" selection-start-column="79" selection-end-line="102" selection-end-column="79" />
+              <folding>
+                <element signature="method#Database#0;class#Database#0" expanded="false" />
+                <element signature="method#createConnection#0;class#Database#0" expanded="false" />
+                <element signature="method#createStatement#0;class#Database#0" expanded="false" />
+                <element signature="method#getData#0;class#Database#0" expanded="false" />
+                <element signature="method#checkUser#0;class#Database#0" expanded="false" />
+                <element signature="method#getAllQuestion#0;class#Database#0" expanded="false" />
+                <element signature="method#getNextQuestion#0;class#Database#0" expanded="false" />
+                <element signature="method#executeUpdate#0;class#Database#0" expanded="false" />
+                <element signature="method#addQuestion#0;class#Database#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,11 +79,16 @@
       <file leaf-file-name="GameIOConsole.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/GameIOConsole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
               <folding>
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
+                <element signature="method#logIn#0;class#GameIOConsole#0" expanded="false" />
+                <element signature="method#getGuestSelection#0;class#GameIOConsole#0" expanded="false" />
+                <element signature="method#loadQuestion#0;class#GameIOConsole#0" expanded="false" />
+                <element signature="method#getSelection#0;class#GameIOConsole#0" expanded="false" />
+                <element signature="method#takeNewQuestion#0;class#GameIOConsole#0" expanded="false" />
+                <element signature="method#showAdminMenu#0;class#GameIOConsole#0" expanded="false" />
+                <element signature="method#getAdminSelection#0;class#GameIOConsole#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -75,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameIO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameIO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/GameIO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="276">
+              <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,15 +154,15 @@
         <option value="$PROJECT_DIR$/src/model/Question.java" />
         <option value="$PROJECT_DIR$/src/model/Admin.java" />
         <option value="$PROJECT_DIR$/database.properties" />
-        <option value="$PROJECT_DIR$/src/model/Database.java" />
         <option value="$PROJECT_DIR$/src/model/User.java" />
-        <option value="$PROJECT_DIR$/src/view/GameIO.java" />
         <option value="$PROJECT_DIR$/src/view/GameIOConsole.java" />
+        <option value="$PROJECT_DIR$/src/model/Database.java" />
         <option value="$PROJECT_DIR$/src/controller/AiLaTrieuPhu.java" />
+        <option value="$PROJECT_DIR$/src/view/GameIO.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="235" />
     <option name="y" value="34" />
     <option name="width" value="1501" />
@@ -155,6 +184,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,10 +222,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,7 +231,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/database.properties" />
   </component>
   <component name="RunDashboard">
@@ -447,25 +476,34 @@
       <option name="presentableId" value="Default" />
       <updated>1499845305105</updated>
     </task>
+    <task id="LOCAL-00001" summary="them thong bao khi nhap user sai">
+      <created>1500875495186</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1500875495186</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="235" y="34" width="1501" height="965" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3074119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30684328" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17936616" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13854167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -517,10 +555,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="thay doi cau truc game" />
-    <option name="LAST_COMMIT_MESSAGE" value="thay doi cau truc game" />
+    <MESSAGE value="them thong bao khi nhap user sai" />
+    <option name="LAST_COMMIT_MESSAGE" value="them thong bao khi nhap user sai" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -532,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -540,7 +580,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
           <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#Database#0;class#Database#0" expanded="false" />
+            <element signature="method#createConnection#0;class#Database#0" expanded="false" />
+            <element signature="method#createStatement#0;class#Database#0" expanded="false" />
+            <element signature="method#getData#0;class#Database#0" expanded="false" />
+            <element signature="method#checkUser#0;class#Database#0" expanded="false" />
+            <element signature="method#getAllQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#getNextQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#executeUpdate#0;class#Database#0" expanded="false" />
+            <element signature="method#addQuestion#0;class#Database#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -559,7 +609,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="method#Database#0;class#Database#0" expanded="false" />
+            <element signature="method#createConnection#0;class#Database#0" expanded="false" />
+            <element signature="method#createStatement#0;class#Database#0" expanded="false" />
+            <element signature="method#getData#0;class#Database#0" expanded="false" />
+            <element signature="method#checkUser#0;class#Database#0" expanded="false" />
+            <element signature="method#getAllQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#getNextQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#executeUpdate#0;class#Database#0" expanded="false" />
+            <element signature="method#addQuestion#0;class#Database#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -583,7 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,7 +686,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
           <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
+          <folding>
+            <element signature="method#Database#0;class#Database#0" expanded="false" />
+            <element signature="method#createConnection#0;class#Database#0" expanded="false" />
+            <element signature="method#createStatement#0;class#Database#0" expanded="false" />
+            <element signature="method#getData#0;class#Database#0" expanded="false" />
+            <element signature="method#checkUser#0;class#Database#0" expanded="false" />
+            <element signature="method#getAllQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#getNextQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#executeUpdate#0;class#Database#0" expanded="false" />
+            <element signature="method#addQuestion#0;class#Database#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -652,7 +721,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="method#Database#0;class#Database#0" expanded="false" />
+            <element signature="method#createConnection#0;class#Database#0" expanded="false" />
+            <element signature="method#createStatement#0;class#Database#0" expanded="false" />
+            <element signature="method#getData#0;class#Database#0" expanded="false" />
+            <element signature="method#checkUser#0;class#Database#0" expanded="false" />
+            <element signature="method#getAllQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#getNextQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#executeUpdate#0;class#Database#0" expanded="false" />
+            <element signature="method#addQuestion#0;class#Database#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -694,7 +773,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="method#Database#0;class#Database#0" expanded="false" />
+            <element signature="method#createConnection#0;class#Database#0" expanded="false" />
+            <element signature="method#createStatement#0;class#Database#0" expanded="false" />
+            <element signature="method#getData#0;class#Database#0" expanded="false" />
+            <element signature="method#checkUser#0;class#Database#0" expanded="false" />
+            <element signature="method#getAllQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#getNextQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#executeUpdate#0;class#Database#0" expanded="false" />
+            <element signature="method#addQuestion#0;class#Database#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -736,7 +825,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="method#Database#0;class#Database#0" expanded="false" />
+            <element signature="method#createConnection#0;class#Database#0" expanded="false" />
+            <element signature="method#createStatement#0;class#Database#0" expanded="false" />
+            <element signature="method#getData#0;class#Database#0" expanded="false" />
+            <element signature="method#checkUser#0;class#Database#0" expanded="false" />
+            <element signature="method#getAllQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#getNextQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#executeUpdate#0;class#Database#0" expanded="false" />
+            <element signature="method#addQuestion#0;class#Database#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -777,15 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -793,6 +883,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -814,39 +905,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Database.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Question.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        <state relative-caret-position="609">
+          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/GameIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/GameIOConsole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding>
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
+            <element signature="method#logIn#0;class#GameIOConsole#0" expanded="false" />
+            <element signature="method#getGuestSelection#0;class#GameIOConsole#0" expanded="false" />
+            <element signature="method#loadQuestion#0;class#GameIOConsole#0" expanded="false" />
+            <element signature="method#getSelection#0;class#GameIOConsole#0" expanded="false" />
+            <element signature="method#takeNewQuestion#0;class#GameIOConsole#0" expanded="false" />
+            <element signature="method#showAdminMenu#0;class#GameIOConsole#0" expanded="false" />
+            <element signature="method#getAdminSelection#0;class#GameIOConsole#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="102" column="79" lean-forward="false" selection-start-line="102" selection-start-column="79" selection-end-line="102" selection-end-column="79" />
+          <folding>
+            <element signature="method#Database#0;class#Database#0" expanded="false" />
+            <element signature="method#createConnection#0;class#Database#0" expanded="false" />
+            <element signature="method#createStatement#0;class#Database#0" expanded="false" />
+            <element signature="method#getData#0;class#Database#0" expanded="false" />
+            <element signature="method#checkUser#0;class#Database#0" expanded="false" />
+            <element signature="method#getAllQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#getNextQuestion#0;class#Database#0" expanded="false" />
+            <element signature="method#executeUpdate#0;class#Database#0" expanded="false" />
+            <element signature="method#addQuestion#0;class#Database#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/AiLaTrieuPhu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-536">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="-228">
+          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/GameIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

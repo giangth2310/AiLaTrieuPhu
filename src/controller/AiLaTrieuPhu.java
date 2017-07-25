@@ -11,41 +11,59 @@ public class AiLaTrieuPhu {
     public static void main(String[] args) {
         AiLaTrieuPhu game = new AiLaTrieuPhu();
 
-        User user;
+        User userEnter, userLogIn;
         boolean isValid = false;
         do {
-            user = gameIO.logIn();
-            user = database.checkUser(user);
-            if (user.getRole() != null) {
+            userEnter = gameIO.logIn();
+            userLogIn = database.checkUser(userEnter);
+            if (userLogIn.getRole() != null) {
                 isValid = true;
             } else {
                 gameIO.notifyInvalidUser();
             }
         } while (! isValid);
 
-        if (user.getRole() == Role.ADMIN) {
-            game.adminProcess(user);
+        if (userLogIn.getRole() == Role.ADMIN) {
+            game.adminProcess(userLogIn);
         } else {
-            game.guestProcess(user);
+            game.guestProcess(userLogIn);
         }
     }
 
     private void adminProcess(User user) {
-        gameIO.showAdminMenu();
+        boolean isRunning = true;
+        while (isRunning) {
+            gameIO.showAdminMenu();
 
-        switch (gameIO.getAdminSelection()) {
-            case 0:
-                play(user);
-                break;
-            case 1:
-                Question question = gameIO.takeNewQuestion();
-                database.addQuestion(question);
-                break;
+            switch (gameIO.getAdminSelection()) {
+                case -1:
+                    isRunning = false;
+                    break;
+                case 0:
+                    play(user);
+                    break;
+                case 1:
+                    Question question = gameIO.takeNewQuestion();
+                    database.addQuestion(question);
+                    break;
+            }
         }
     }
 
     private void guestProcess(User user) {
-        play(user);
+        boolean isRunning = true;
+        while (isRunning) {
+            gameIO.showGuestMenu();
+
+            switch (gameIO.getGuestSelection()) {
+                case 0:
+                    play(user);
+                    break;
+                case -1:
+                    isRunning = false;
+                    break;
+            }
+        }
     }
 
     private void play(User user) {

@@ -20,6 +20,24 @@ public class GameIOConsole implements GameIO {
         System.out.println("Wrong username or password");
     }
 
+    public void showGuestMenu() {
+        System.out.println("0. Choi Game");
+    }
+
+    public int getGuestSelection() {
+        Scanner scanner = new Scanner(System.in);
+        int selection;
+
+        System.out.println("Chon chuc nang: ");
+        selection = scanner.nextInt();
+
+        if (selection == 0) {
+            return selection;
+        } else {
+            return -1;
+        }
+    }
+
     public void loadQuestion(Question question) {
         String content = question.getContent();
         String[] answer = question.getAnswer();
@@ -38,7 +56,11 @@ public class GameIOConsole implements GameIO {
         System.out.println("Chon cau tra loi (nhap so tu 0..3 hoac so bat ki de dung choi): ");
         selection = scanner.nextInt();
 
-        return selection;
+        if (selection >= 0 && selection <= 3) {
+            return selection;
+        } else {
+            return -1;
+        }
     }
 
     public void showScore(User user) {
@@ -77,11 +99,13 @@ public class GameIOConsole implements GameIO {
         Scanner scanner = new Scanner(System.in);
         int selection;
 
-        do {
-            System.out.println("Chon chuc nang: ");
-            selection = scanner.nextInt();
-        } while (selection < 0 || selection > 1);
+        System.out.println("Chon chuc nang: ");
+        selection = scanner.nextInt();
 
-        return selection;
+        if (selection >=0 && selection <=1) {
+            return selection;
+        } else {
+            return -1;
+        }
     }
 }
