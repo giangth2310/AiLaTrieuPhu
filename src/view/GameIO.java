@@ -19,7 +19,7 @@ public interface GameIO {
      */
     int getSelection();
 
-    void showScore(User user);
+    void showEndGameMessage(User user);
 
     /*
     Hien thi thong bao khi tra loi het cau hoi trong database
@@ -47,4 +47,6 @@ public interface GameIO {
           -1 thoat
      */
     int getGuestSelection();
+
+    void showScore(User user);
 }

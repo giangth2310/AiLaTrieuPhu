@@ -72,8 +72,10 @@ public class AiLaTrieuPhu {
 
         while (! stopPlaying) {
             Question question = database.getNextQuestion();
+
             if (question != null) {
                 gameIO.loadQuestion(question);
+                gameIO.showScore(user);
                 int selection = gameIO.getSelection();
                 if (selection == question.getRightAnswer()) {
                     user.scored();
@@ -86,6 +88,6 @@ public class AiLaTrieuPhu {
             }
         }
 
-        gameIO.showScore(user);
+        gameIO.showEndGameMessage(user);
     }
 }

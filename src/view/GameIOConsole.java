@@ -49,6 +49,10 @@ public class GameIOConsole implements GameIO {
         System.out.println("3. " + answer[3]);
     }
 
+    public void showScore(User user) {
+        System.out.println("So diem ban dang co la: " + user.getScore());
+    }
+
     public int getSelection() {
         Scanner scanner = new Scanner(System.in);
         int selection;
@@ -63,7 +67,7 @@ public class GameIOConsole implements GameIO {
         }
     }
 
-    public void showScore(User user) {
+    public void showEndGameMessage(User user) {
         System.out.println("So diem ban danh duoc la: " + user.getScore());
     }
 
