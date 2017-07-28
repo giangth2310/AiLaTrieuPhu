@@ -68,6 +68,7 @@ public class AiLaTrieuPhu {
 
     private void play(User user) {
         boolean stopPlaying = false;
+        user.resetScore();
 
         while (! stopPlaying) {
             Question question = database.getNextQuestion();
