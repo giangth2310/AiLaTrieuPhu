@@ -106,6 +106,7 @@ public class Database {
             for (int i = 0; i < index.length; i++) {
                 preparedStatement.setString(index[i], value[i]);
             }
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
