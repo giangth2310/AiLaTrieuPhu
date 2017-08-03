@@ -131,14 +131,18 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="f9ca2" class="javax.swing.JLabel" binding="contentLabel">
+          <component id="14265" class="javax.swing.JTextArea" binding="contentLabel">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
               </grid>
             </constraints>
             <properties>
+              <editable value="false"/>
+              <lineWrap value="true"/>
+              <tabSize value="4"/>
               <text value=""/>
+              <wrapStyleWord value="false"/>
             </properties>
           </component>
           <component id="ae16f" class="javax.swing.JButton" binding="answer1Button">
@@ -336,4 +340,12 @@
       </grid>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="buttonGroup1">
+      <member id="ff3a2"/>
+      <member id="c86c3"/>
+      <member id="49ab4"/>
+      <member id="9d26"/>
+    </group>
+  </buttonGroups>
 </form>

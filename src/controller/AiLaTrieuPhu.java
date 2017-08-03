@@ -5,7 +5,7 @@ import view.*;
 
 public class AiLaTrieuPhu {
 
-    private static GameIO gameIO = new GameIOConsole();
+    private static GameIO gameIO = new GameIOSwing();
     private static Database database = new Database();
 
     public static void main(String[] args) {

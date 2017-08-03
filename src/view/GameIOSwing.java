@@ -4,8 +4,7 @@ import model.Question;
 import model.User;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
 import java.util.Arrays;
 
 public class GameIOSwing extends JFrame implements GameIO {
@@ -27,7 +26,7 @@ public class GameIOSwing extends JFrame implements GameIO {
     private JButton answer2Button;
     private JButton answer3Button;
     private JButton answer4Button;
-    private JLabel contentLabel;
+    private JTextArea contentLabel;
     private JButton stopButton;
     private JLabel scoreLabel;
     private JPanel addQuestionPanel;
@@ -42,6 +41,8 @@ public class GameIOSwing extends JFrame implements GameIO {
     private JCheckBox rightAnswer2CheckBox;
     private JCheckBox rightAnswer3CheckBox;
     private JCheckBox rightAnswer4CheckBox;
+
+    private Image imageBackground = new ImageIcon("background.jpg").getImage();
 
     private User user = new User(null, null);
     private String content;
@@ -62,76 +63,37 @@ public class GameIOSwing extends JFrame implements GameIO {
         super("Ai là triệu phú");
         setContentPane(rootPanel);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+        setSize(500, 700);
         setLocationRelativeTo(null);
-        pack();
         setVisible(true);
-
-    }
-    public User logIn() {
-        logInPanel.setVisible(true);
 
         logInButton.addActionListener(e -> {
             user = new User(usernameTextField.getText(), new String(passwordField.getPassword()));
             flagLogin = true;
         });
 
-        while (!flagLogin) {
-            try {
-                Thread.sleep(200);
-            } catch ( InterruptedException e) {
-                System.out.println(Arrays.toString(e.getStackTrace()));
-            }
-        }
-
-        flagLogin = false;
-        return user;
-    }
-
-    public void notifyInvalidUser() {
-        JOptionPane.showMessageDialog(null, "Wrong username or password");
-    }
-
-    public void showGuestMenu() {
-        guestSelectionPanel.setVisible(true);
-        logInPanel.setVisible(false);
-        playPanel.setVisible(false);
-    }
-
-    public int getGuestSelection() {
-
         playGuestButton.addActionListener(e -> {
             guestSelection = 0;
             flagGuestSelection = true;
         });
 
-        while (!flagGuestSelection) {
-            try {
-                Thread.sleep(200);
-            } catch ( InterruptedException e) {
-                System.out.println(Arrays.toString(e.getStackTrace()));
+        addQuestionButton.addActionListener(e -> {
+            flagAddQuestion = true;
+            content = addContentTextArea.getText();
+            answer[0] = addAnswer1TextField.getText();
+            answer[1] = addAnswer3TextField.getText();
+            answer[2] = addAnswer2TextField.getText();
+            answer[3] = addAnswer4TextField.getText();
+
+            if ((!rightAnswer1CheckBox.isSelected() && !rightAnswer2CheckBox.isSelected() && !rightAnswer3CheckBox.isSelected() && !rightAnswer4CheckBox.isSelected()) ||
+                    addContentTextArea.getText().equals("") || addAnswer1TextField.getText().equals("") || addAnswer2TextField.getText().equals("") ||
+                    addAnswer3TextField.getText().equals("") || addAnswer4TextField.getText().equals("")) {
+                flagAddQuestion = false;
+                JOptionPane.showMessageDialog(null, "Chưa nhập đầy đủ thông tin câu hỏi");
             }
-        }
+        });
 
-        flagGuestSelection = false;
-        return guestSelection;
-    }
-
-    public void loadQuestion(Question question) {
-        playPanel.setVisible(true);
-        logInPanel.setVisible(false);
-        guestSelectionPanel.setVisible(false);
-
-        String content = question.getContent();
-        String[] answer = question.getAnswer();
-
-        contentLabel.setText(content);
-        answer1Button.setText("A: " + answer[0]);
-        answer2Button.setText("B: " + answer[1]);
-        answer3Button.setText("C: " + answer[2]);
-        answer4Button.setText("D: " + answer[3]);
-    }
-
-    public int getSelection() {
         answer1Button.addActionListener(e -> {
             answerSelection = 0;
             flagAnswerSelection = true;
@@ -156,6 +118,79 @@ public class GameIOSwing extends JFrame implements GameIO {
             answerSelection = -1;
             flagAnswerSelection = true;
         });
+
+        rightAnswer1CheckBox.addActionListener(e -> rightAnswer = 0);
+        rightAnswer2CheckBox.addActionListener(e -> rightAnswer = 1);
+        rightAnswer3CheckBox.addActionListener(e -> rightAnswer = 2);
+        rightAnswer4CheckBox.addActionListener(e -> rightAnswer = 3);
+
+        adminPlayButton.addActionListener(e -> {
+            adminSelection = 0;
+            flagAdminSelection = true;
+            adminSelectionPanel.setVisible(false);
+            playPanel.setVisible(true);
+        });
+
+        addQuestionsButton.addActionListener(e -> {
+            adminSelection = 1;
+            flagAdminSelection = true;
+        });
+    }
+    public User logIn() {
+        logInPanel.setVisible(true);
+
+        while (!flagLogin) {
+            try {
+                Thread.sleep(200);
+            } catch ( InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        flagLogin = false;
+        return user;
+    }
+
+    public void notifyInvalidUser() {
+        JOptionPane.showMessageDialog(null, "Wrong username or password");
+    }
+
+    public void showGuestMenu() {
+        guestSelectionPanel.setVisible(true);
+        logInPanel.setVisible(false);
+        playPanel.setVisible(false);
+    }
+
+    public int getGuestSelection() {
+
+        while (!flagGuestSelection) {
+            try {
+                Thread.sleep(200);
+            } catch ( InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        flagGuestSelection = false;
+        return guestSelection;
+    }
+
+    public void loadQuestion(Question question) {
+        String content = question.getContent();
+        String[] answer = question.getAnswer();
+
+        contentLabel.setText(content);
+        answer1Button.setText("A: " + answer[0]);
+        answer2Button.setText("B: " + answer[1]);
+        answer3Button.setText("C: " + answer[2]);
+        answer4Button.setText("D: " + answer[3]);
+
+        playPanel.setVisible(true);
+        logInPanel.setVisible(false);
+        guestSelectionPanel.setVisible(false);
+    }
+
+    public int getSelection() {
         while (!flagAnswerSelection) {
             try {
                 Thread.sleep(200);
@@ -179,36 +214,15 @@ public class GameIOSwing extends JFrame implements GameIO {
         addQuestionPanel.setVisible(true);
         adminSelectionPanel.setVisible(false);
 
-        addContentTextArea.setText(null);
-        addAnswer1TextField.setText(null);
-        addAnswer2TextField.setText(null);
-        addAnswer3TextField.setText(null);
-        addAnswer4TextField.setText(null);
+        addContentTextArea.setText("");
+        addAnswer1TextField.setText("");
+        addAnswer2TextField.setText("");
+        addAnswer3TextField.setText("");
+        addAnswer4TextField.setText("");
         rightAnswer1CheckBox.setSelected(false);
         rightAnswer2CheckBox.setSelected(false);
         rightAnswer3CheckBox.setSelected(false);
         rightAnswer4CheckBox.setSelected(false);
-
-        rightAnswer1CheckBox.addActionListener(e -> rightAnswer = 0);
-        rightAnswer2CheckBox.addActionListener(e -> rightAnswer = 1);
-        rightAnswer3CheckBox.addActionListener(e -> rightAnswer = 2);
-        rightAnswer4CheckBox.addActionListener(e -> rightAnswer = 3);
-
-        addQuestionButton.addActionListener(e -> {
-            flagAddQuestion = true;
-            content = addContentTextArea.getText();
-            answer[0] = addAnswer1TextField.getText();
-            answer[1] = addAnswer3TextField.getText();
-            answer[2] = addAnswer2TextField.getText();
-            answer[3] = addAnswer4TextField.getText();
-
-            if ((!rightAnswer1CheckBox.isSelected() && !rightAnswer2CheckBox.isSelected() && !rightAnswer3CheckBox.isSelected() && !rightAnswer4CheckBox.isSelected()) ||
-                    addContentTextArea.getText().equals("") || addAnswer1TextField.getText().equals("") || addAnswer2TextField.getText().equals("") ||
-                    addAnswer3TextField.getText().equals("") || addAnswer4TextField.getText().equals("")) {
-                flagAddQuestion = false;
-                JOptionPane.showMessageDialog(null, "Chưa nhập đầy đủ thông tin câu hỏi");
-            }
-        });
 
         while (!flagAddQuestion) {
             try {
@@ -224,29 +238,17 @@ public class GameIOSwing extends JFrame implements GameIO {
     }
 
     public void winGame() {
-        System.out.println("Ban da thanh trieu phu !!!");
+        JOptionPane.showMessageDialog(null, "Bạn đã thành triệu ");
     }
 
     public void showAdminMenu() {
+        adminSelectionPanel.setVisible(true);
         playPanel.setVisible(false);
         logInPanel.setVisible(false);
         addQuestionPanel.setVisible(false);
-        adminSelectionPanel.setVisible(true);
     }
 
     public int getAdminSelection() {
-        adminPlayButton.addActionListener(e -> {
-            adminSelection = 0;
-            flagAdminSelection = true;
-            adminSelectionPanel.setVisible(false);
-            playPanel.setVisible(true);
-        });
-
-        addQuestionsButton.addActionListener(e -> {
-            adminSelection = 1;
-            flagAdminSelection = true;
-        });
-
         while (!flagAdminSelection) {
             try {
                 Thread.sleep(200);
