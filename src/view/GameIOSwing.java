@@ -4,7 +4,6 @@ import model.Question;
 import model.User;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.Arrays;
 
 public class GameIOSwing extends JFrame implements GameIO {
@@ -41,8 +40,6 @@ public class GameIOSwing extends JFrame implements GameIO {
     private JCheckBox rightAnswer2CheckBox;
     private JCheckBox rightAnswer3CheckBox;
     private JCheckBox rightAnswer4CheckBox;
-
-    private Image imageBackground = new ImageIcon("background.jpg").getImage();
 
     private User user = new User(null, null);
     private String content;
@@ -152,7 +149,7 @@ public class GameIOSwing extends JFrame implements GameIO {
     }
 
     public void notifyInvalidUser() {
-        JOptionPane.showMessageDialog(null, "Wrong username or password");
+        JOptionPane.showMessageDialog(null, "Tên đăng nhập hoặc mật khẩu sai");
     }
 
     public void showGuestMenu() {
@@ -238,7 +235,7 @@ public class GameIOSwing extends JFrame implements GameIO {
     }
 
     public void winGame() {
-        JOptionPane.showMessageDialog(null, "Bạn đã thành triệu ");
+        JOptionPane.showMessageDialog(null, "Bạn đã thành triệu phú");
     }
 
     public void showAdminMenu() {
